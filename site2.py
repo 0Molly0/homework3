@@ -15,13 +15,10 @@ fish_emodji = '\U0001F420'
 hamster_emodji = '\U0001F439'
 turtle_emodji = '\U0001F422'
 
-user_pet_swimming = str(pw_input('Ваш улюбленець може плавати? (так/ні)', required=True))
-
 fish = 'риба'
 turtle = 'черепаха'
 
 can_swim = user_favorite_animal == fish or user_favorite_animal == turtle
-cant_swim = not can_swim
 
 if can_swim:
     put_code('Ваш улюбленець вміє плавати')
