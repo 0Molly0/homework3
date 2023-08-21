@@ -36,7 +36,7 @@ total_score = 0
 
 for key, value in students.items():
     if students[key]['Середній бал'] > 90:
-        list_of_students = key, students[key]
+        list_of_students.append([key, students[key]])
     total_score += students[key]['Середній бал']
     if not students[key]['Номер телефону']:
         students[key]['Номер телефону'] = '+380997971821'
