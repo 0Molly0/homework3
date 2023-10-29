@@ -3,15 +3,15 @@ import sqlite3
 with sqlite3.connect('new_db.sqlite3') as connection:
     cursor = connection.cursor()
 
-    # query = """
-    #     CREATE TABLE IF NOT EXISTS books(
-    #         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    #         name TEXT NOT NULL,
-    #         number_of_pages INTEGER CHECK (number_of_pages > 0),
-    #         price DECIMAL(10, 2) CHECK (price > 0)
-    #     )
-    # """
-    # cursor.execute(query)
+    query = """
+        CREATE TABLE IF NOT EXISTS books(
+            id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+            name TEXT NOT NULL,
+            number_of_pages INTEGER CHECK (number_of_pages > 0),
+            price DECIMAL(10, 2) CHECK (price > 0)
+        )
+    """
+    cursor.execute(query)
 
     # name = 'Гра престолів'
     # number_of_pages = 800
