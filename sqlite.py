@@ -19,15 +19,11 @@ with sqlite3.connect('new_tables.sqlite3') as connection:
     """
     cursor.executescript(query)
 
-    values = (
-        (1, 'Стівен Кінг'),
-        (2, 'Олександр Авраменко'),
-        (3, 'Оксана Карпюк')
-        )
+    values = ['Стівен Кінг'], ['Олександр Авраменко'], ['Оксана Карпюк']
 
     query = """
-        INSERT INTO author(id, authors)
-        VALUES (?, ?)
+        INSERT INTO author(authors)
+        VALUES (?)
     """
     cursor.executemany(query, values)
 
